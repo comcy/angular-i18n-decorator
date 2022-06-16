@@ -21,6 +21,28 @@ const i18nValues = {
   },
 };
 
+const i18nValuesEn = {
+  app: 'Angular [placeholder]',
+  appo: 'Angular appo [placeholder] appo',
+  first: 'First!!!',
+  second: 'Second!!!',
+  project: {
+    header: {
+      form: {
+        name: 'NameEn',
+        description: 'BeschreibungEn',
+      },
+    },
+  },
+  page: {
+    title: 'Herzlich Willkommen zu meiner Seite, yeah!!!En',
+    pageForm: {
+      nameLabel: 'NameEn',
+      weightLabel: 'Gewicht: [placeholder] in kgEn',
+    },
+  },
+};
+
 const get = (obj, ...selectors) =>
   [...selectors].map((s) =>
     s
@@ -140,10 +162,10 @@ export class AppComponent {
   pageTitle: string = '';
 
   @i18n('page.pageForm.nameLabel', 'name')
-  nameLabel: string = '';
+  nameLabel!: string;
 
   // @i18n('page.pageForm.weightLabel', 'description keep [placeholder:kg] kg', '')
-  weightLabel: string = '';
+  weightLabel!: string;
 
   ngOnInit() {
     this.setI18n();
