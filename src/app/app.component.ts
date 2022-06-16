@@ -16,7 +16,7 @@ const i18nValues = {
     title: 'Herzlich Willkommen zu meiner Seite, yeah!!!',
     pageForm: {
       nameLabel: 'Name',
-      weightLabel: 'Gewicht: [placeholder] in kg',
+      weightLabel: 'Gewicht: [placeholder] kg (geschätzt)',
     },
   },
 };

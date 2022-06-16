@@ -21,14 +21,12 @@ In general there are two possibilities:
 })
 export class AppComponent {
 
-  @i18n('key.to.text.in.file', 'fallback text value', 'optional placeholder')
+  @i18n('key.to.text.in.file', 'initial and fallback text value with optional [placeholder]', 'optional placeholder')
   name!: string;
 
   descriptionLabel!: string;
 
   constructor() { ... }
-
-
 
   ...
 }
@@ -39,7 +37,7 @@ Or you can change values without using any **`i18n`-decorator**
 ```ts
   setI18n() {
     this.descriptionLabel = getI18nText(
-      'page.pageForm.weightLabel',
+      'key.to.text.in.file',
       'Gewicht: [placeholder] kg',
       100
     );
